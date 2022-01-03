@@ -3,13 +3,14 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-console.log(playerName,playerAttack,playerHealth);
+console.log(playerName,playerAttack,playerHealth,playerMoney);
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Andriod", "Robo Tumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function () {
+
+var fight = function (enemyName) {
     //alerting the players that the game has begun
     window.alert ("Welcome to Gladiators!");
 
@@ -81,7 +82,11 @@ var fight = function () {
     }
 }
 
-fight();
+for (var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
+
+//fight();
 
 
 
